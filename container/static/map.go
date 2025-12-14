@@ -6,6 +6,7 @@ import (
 	"math/rand/v2"
 )
 
+// UNSTABLE
 type Map[K comparable, V any] = *hmap[K, V]
 
 type KV[K comparable, V any] struct {
@@ -13,6 +14,7 @@ type KV[K comparable, V any] struct {
 	Val V
 }
 
+// UNSTABLE
 func NewMap[K comparable, V any](entries ...KV[K, V]) Map[K, V] {
 	size := 4 * len(entries)
 	seed := maphash.MakeSeed()
